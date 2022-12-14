@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+/* General Styling */
+h1, h2, h3, h4, h5, h6, p {
+  color: white;
+  font-family: 'Poppins';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Employee List */
+
+div.app {
+  background-color: rgb(31, 31, 31);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rosterContainer, .employeeContainer {
+  background-color: rgb(31, 31, 31);
+  height: 100vh;
+  width: 100vw !important;
+  padding: 0;
+  margin: 0 0 0 0;
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.rosterHeader {
+  margin-left: 40px;
+}
+
+h2 {
+  font-size: 13px;
+  padding-top: 25px;
+  font-weight: 600;
+}
+
+h2 > span:nth-child(1) {
+  margin-right: 10px; 
+  color: rgb(112, 112, 112)
+}
+
+h2 {
+  color: rgb(112, 112, 112);
+  font-weight: 900;
+}
+
+div.employeeHeader h2 span:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 10px; 
+  color: rgb(112, 112, 112)
+}
+
+div.rosterHeader h2 span:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 10px; 
+  color: white
+}
+
+h2 span:nth-child(3) {
+  margin-left: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.rosterHeader > h1 {
+  font-size: 48px;
+  font-weight: 800;
+  padding: 20px 0px 20px 0px;
+  margin-left: 10px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rosterSettings {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchBar {
+  background-color: rgb(38, 38, 38);
+  padding: 10px 20px 10px 20px;
+  border-radius: 30px;
+  width: 35%;
+  margin: 0px 10px 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar > :first-child {
+  margin-right: 10px;
+}
+
+::placeholder {
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+select {
+  background-color: rgb(38, 38, 38);
+  border-right: 20px solid transparent;
+  border-color: rgb(38, 38, 38);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 20px 0px 20px 20px;
+  border-radius: 30px;
+  margin: 0px 10px 0px 10px;
+}
+
+.rosterList {
+  width: 70%;
+  margin-left: 5%;
+}
+
+.rosterListHeader > h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 900;
+  color: grey
+}
+
+.employee {
+  border-top: 1px solid grey;
+  padding: 15px 0px 15px 0px;
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.employee > h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.employee:hover > h4 {
+  filter: opacity(60%);
+}
+
+/* Loading */
+
+.loadingContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loadingText {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/* Employee */
+
+.employeeContainer {
+  padding-right: 20vw;
+}
+
+.employeeHeader {
+  flex-direction: row;
+}
+
+.backButtonContainer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.backButtonContainer:hover {
+  filter: opacity(20%);
+}
+
+.employeeMain {
+  margin: 20px 0px 0px 50px
+}
+
+div.employeeTitle {
+  margin: 20px 0px 0px 25px;
+}
+
+div.employeeTitle > h1 {
+  font-weight: 900;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.employeePhoto {
+  height: 250px;
+  width: 250px;
+  padding: 0;
+  border-radius: 15px;
+}
+
+.employeeInfo { 
+  margin-top: 25px;
+}
+
+div.subheading p {
+  color: white;
+  font-weight: 900;
+}
+
+.employeeInfo p {
+  font-size: 24px;
+  color: grey;
+}
+
+.role p {
+  text-transform: capitalize;
 }
